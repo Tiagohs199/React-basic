@@ -1,17 +1,18 @@
+import { useState } from "react"
 import IndiretaFilho from "./IndiretaFilho"
 
-let nome = '?'
-let idade = 0
-let nerd = false
 
-function fornecerInfo(nomeP, idadeP, nerdP) {
-    nome = nomeP
-    idade = idadeP
-    nerd = nerdP
-
-    console.log(nomeP,idadeP,nerdP)
-}
 export default props => {
+    const [nome, setNome] = useState('?')
+    const [idade, setIdade] = useState(0)
+    const [nerd, setNerd] = useState(false)
+
+    function fornecerInfo(nome, idade, nerd) {
+        setNome(nome)
+        setIdade(idade)
+        setNerd(nerd)
+    }
+  
     return (
         <div>
             <div>
